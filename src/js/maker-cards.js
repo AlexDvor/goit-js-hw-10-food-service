@@ -20,13 +20,3 @@ menuRef.insertAdjacentHTML('beforeend', menuItem)
 
 
 
-
-// --------------------------------
-
-// function makerMenuCards(obj) {
-//     return obj.map(cardsTpl).join('')
-// }
-
-
-// const menuItem = makerMenuCards(menuData)
-// menuRef.insertAdjacentHTML('beforeend', menuItem)
