@@ -18,16 +18,15 @@ function onToggleClick(e) {
   
   if (checked) {
     changesClassElement(Theme.DARK, Theme.LIGHT)
-    localStorage.setItem('Theme', Theme.DARK,)
+    addKeyInLocalStorage ('Theme', Theme.DARK)
   }
 
   if (!checked) {
     changesClassElement(Theme.LIGHT, Theme.DARK)
-    localStorage.setItem('Theme', Theme.LIGHT,)
+    addKeyInLocalStorage ('Theme', Theme.LIGHT)
   }
  }
  
-
 function changesClassElement(add,remove) {
   bodyRef.classList.remove(remove)
   bodyRef.classList.add(add)
@@ -50,3 +49,6 @@ function checkBodyClass() {
   }
 }
 
+function addKeyInLocalStorage(key,value) {
+ localStorage.setItem(key, value)
+}
