@@ -9,20 +9,33 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
-// bodyRef.classList.add('light-theme')
+
+
 
 function onToggleClick(e) {
   const checked = e.target.checked
-  console.log(checked)
-  // if (checked === true) {
-  //   bodyRef.classList.add(DARK)
-  // }
+  
+  if (checked) {
+    checkClassElement(Theme.DARK, Theme.LIGHT)
+  
+  }
 
-  // if (checked === false)
-  //   bodyRef.classList.add(LIGHT)
+  if (!checked) {
+   checkClassElement(Theme.LIGHT,Theme.DARK)
+  }
+
  }
  
 
+
+
+
+
+ 
+function checkClassElement(add,remove) {
+  bodyRef.classList.remove(remove)
+  bodyRef.classList.add(add)
+}
 
 
 
