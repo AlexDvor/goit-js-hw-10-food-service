@@ -9,12 +9,22 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
-
-bodyRef.classList.add('light-theme')
+// bodyRef.classList.add('light-theme')
 
 function onToggleClick(e) {
   const checked = e.target.checked
-  if (checked === true) {
-    bodyRef.classList.add()
-  }
+  console.log(checked)
+  // if (checked === true) {
+  //   bodyRef.classList.add(DARK)
+  // }
+
+  // if (checked === false)
+  //   bodyRef.classList.add(LIGHT)
  }
+ 
+
+
+
+
+ 
+
