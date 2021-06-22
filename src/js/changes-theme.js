@@ -10,34 +10,44 @@ const Theme = {
 };
 
 
-
+checkLocalStorage()
+checkupBodyStyle()
 
 function onToggleClick(e) {
   const checked = e.target.checked
   
   if (checked) {
-    checkClassElement(Theme.DARK, Theme.LIGHT)
-  
+    addedClassElement(Theme.DARK, Theme.LIGHT)
+    localStorage.setItem('Theme', Theme.DARK,)
   }
 
   if (!checked) {
-   checkClassElement(Theme.LIGHT,Theme.DARK)
+    addedClassElement(Theme.LIGHT, Theme.DARK)
+    localStorage.setItem('Theme', Theme.LIGHT,)
   }
-
  }
  
 
-
-
-
-
- 
-function checkClassElement(add,remove) {
+function addedClassElement(add,remove) {
   bodyRef.classList.remove(remove)
   bodyRef.classList.add(add)
 }
 
-
-
+function checkLocalStorage() { 
+  const localStor = localStorage.getItem('Theme')
  
+  if (localStor) {
+    bodyRef.classList.add(localStor)
+  
+  }
+}
+
+function checkupBodyStyle() {
+ const value = bodyRef.classList.value
+  if (value === Theme.DARK) {
+    switchToggleRef.checked = true
+  } else {
+    switchToggleRef.checked = false
+  }
+}
 
